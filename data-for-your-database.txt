@@ -37,9 +37,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
-(1, 'Category 1'),
-(2, 'Category 2'),
-(3, 'Category 3');
+(1, 'Postage'),
+(2, 'Music'),
+(3, 'Occasion'),
+(4, 'Vintage');
 
 -- --------------------------------------------------------
 
@@ -52,26 +53,34 @@ CREATE TABLE `records` (
   `categoryID` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `image` varchar(255) NOT NULL
+  `image` varchar(255) NOT NULL,
+  `year` Year NOT NULL,
+  `country` Year NOT NULL,
+  `size` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `records`
 --
 
-INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUES
-(1, 1, 'Some text', '12.00', '644471.jpg'),
-(2, 1, 'Some text', '15.00', '233012.jpg'),
-(3, 1, 'Some text', '18.00', '329484.jpg'),
-(4, 1, 'Some text', '10.00', '644055.jpg'),
-(5, 2, 'Some text', '16.00', '373465.jpg'),
-(6, 2, 'Some text', '19.00', '373989.jpg'),
-(7, 2, 'Some text', '12.00', '374104.jpg'),
-(8, 2, 'Some text', '10.00', '4733.jpg'),
-(9, 2, 'Some text', '15.00', '834551.jpg'),
-(10, 3, 'Some text', '13.00', '908783.jpg'),
-(11, 3, 'Some text', '17.00', '835545.jpg'),
-(12, 3, 'Some text', '19.00', '119273.jpg');
+INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`,`year`,`country`,`size`) VALUES
+(1, 1, 'Air Mail', 1.25, 'post-US.jpeg', 1918, 'United States','24 x 12'),
+(2, 1, 'One-Penny-Claret', 2.30, 'post-new-zealand.png', 1873, 'New Zealand','12 x 16'),
+(3, 1, 'Register of Marine Species', 1.78, 'post-canada.png',2016, 'Canada','7 x 18'),
+(4, 1, 'Hermit Crab', 2.45, 'post-australia.png',1966, 'Australia','12 x 16'),
+(5, 1, 'WaterFowl Conservation', 1.30, 'post-USA.jpg',2002, 'United States','7 x 13'),
+
+(6, 2, 'Thin Lizzy', 1.25, 'music1.jpg', 2016, 'Ireland','4 x 14'),
+(7, 2, 'Great Irish Songs', 1.25, 'music2.jpg', 2015, 'Ireland','12 x 14'),
+(8, 2, 'Sitar', 3.25, 'music3.png', 1999, 'India','4 x 14'),
+
+(9, 3, 'Winter Olympics', 10.25, 'occassion-winterOlympics-china.png', 1984, 'China','3 x 12'),
+(10, 3, 'Christmas', 5.25, 'occassion-christmas-ireland.jpg', 2017, 'Ireland','3 x 12'),
+(11, 3, 'Diwali', 8.25, 'occassion-diwali-india.jpg', 1944, 'India','5 x 14'),
+
+(12, 4, 'eire', 23.25, 'vintage-ireland.png', 1984, 'Ireland','12 x 8'),
+(13, 4, 'Espana', 15.25, 'vintage-spain.png', 1917, 'Spain','24 x 12'),
+(14, 4, 'Andre-Spitz', 18.25, 'vintage-france.jpg', 1944, 'France','34 x 14');
 
 --
 -- Indexes for dumped tables
@@ -97,16 +106,15 @@ ALTER TABLE `records`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
