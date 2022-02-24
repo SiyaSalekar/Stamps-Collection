@@ -1,14 +1,14 @@
 /*body style*/
 body {
-    background-color: #ccc;
+    background-color: $primary-color;
+    .container {
+        /* margin-top: 0; */
+        font-family: Arial, Helvetica, sans-serif;
+        width: 1000px;
+        margin: 0 auto;
+        background-color: white;
+        border: 1px solid black;
+        padding: .5em 2em;
+    }
 }
 
-.container {
-    /* margin-top: 0; */
-    font-family: Arial, Helvetica, sans-serif;
-    width: 1000px;
-    margin: 0 auto;
-    background-color: white;
-    border: 1px solid black;
-    padding: .5em 2em;
-}
