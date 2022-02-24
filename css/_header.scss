@@ -1,0 +1,11 @@
+/*header style*/
+header {
+    margin: 0;
+    border-bottom: 2px solid black;
+    font-family: $font-stack;
+}
+header h1 {
+    margin: 0;
+    padding: .5em 0;
+    color: $primary-color;
+}
