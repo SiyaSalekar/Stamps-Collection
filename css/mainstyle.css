@@ -2,26 +2,28 @@
 header {
   margin: 0;
   border-bottom: 2px solid black;
-  font-family: "Shizuru", cursive;
+  font-family: "Shizuru", cursive bold;
 }
+
 header h1 {
   margin: 0;
-  padding: 0.5em 0;
+  padding: .5em 0;
   color: #32f7;
 }
 
 /*body style*/
 body {
-  background-color: #32cd32;
+  background-color: lightblue;
 }
+
 body .container {
   /* margin-top: 0; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Helvetica, sans-serif;
   width: 1000px;
   margin: 0 auto;
   background-color: white;
   border: 1px solid black;
-  padding: 0.5em 2em;
+  padding: .5em 2em;
 }
 
 footer {
@@ -29,8 +31,10 @@ footer {
   margin-top: 1em;
   border-top: 2px solid black;
 }
+
 footer p {
   text-align: right;
   font-size: 80%;
   margin: 1em 0;
-}/*# sourceMappingURL=mainstyle.css.map */
+}
+/*# sourceMappingURL=mainstyle.css.map */

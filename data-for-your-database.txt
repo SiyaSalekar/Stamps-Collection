@@ -55,7 +55,7 @@ CREATE TABLE `records` (
   `price` decimal(10,2) NOT NULL,
   `image` varchar(255) NOT NULL,
   `year` Year NOT NULL,
-  `country` Year NOT NULL,
+  `country` varchar(255) NULL,
   `size` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
