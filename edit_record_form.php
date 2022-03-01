@@ -16,7 +16,7 @@ $statement->closeCursor();
 <?php
 include('includes/header.php');
 ?>
-        <h1>Edit Product</h1>
+        <h1>Edit Stamp Details</h1>
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">
             <input type="hidden" name="original_image" value="<?php echo $records['image']; ?>" />
@@ -33,14 +33,30 @@ include('includes/header.php');
                    value="<?php echo $records['name']; ?>">
             <br>
 
-            <label>List Price:</label>
+            <label>Price:</label>
             <input type="input" name="price"
                    value="<?php echo $records['price']; ?>">
             <br>
 
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
-            <br>            
+            <br> 
+            
+            <label>Year:</label>
+            <input type="input" name="year"
+                   value="<?php echo $records['year']; ?>">
+            <br>
+
+            <label>Country:</label>
+            <input type="input" name="country"
+                   value="<?php echo $records['country']; ?>">
+            <br>
+            
+            <label>Size:</label>
+            <input type="input" name="size"
+                   value="<?php echo $records['size']; ?>">
+            <br>
+
             <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
             <?php } ?>
