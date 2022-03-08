@@ -85,12 +85,17 @@ include('includes/header.php');
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
+                        <i class="fas fa-justify"></i>
                     </button>
-
+                    <div>
+                    <form class="example" action="action_page.php">
+  <input type="text" placeholder="Search Stamp" name="search">
+  <button class = "btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+</form>
+                    </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
@@ -110,7 +115,7 @@ include('includes/header.php');
 
 <?php foreach ($records as $record) : ?>
 <div class="card">
-<div class = "imgc"><img class="card-img" src="image_uploads/<?php echo $record['image']; ?>"/></div>
+<img class="card-img w-50" src="image_uploads/<?php echo $record['image']; ?>"/>
 <div class="card-body">
 <p class="card-text h4">
 <?php echo $record['name']; ?><br>
@@ -144,13 +149,8 @@ value="<?php echo $record['categoryID']; ?>">
 </div>
 <?php endforeach; ?>
 
-
-
-
-    </div>
 </div>
-
-
+</div>
 
       <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

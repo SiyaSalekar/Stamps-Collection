@@ -32,7 +32,7 @@ function price_validation(){
     userid_name.focus();
     document.getElementById('pr_err').style.color = "#FF0000";
     }
-    else if(!/^[0-9]+$/.test(userid_length)){
+    else if(!/^(?:\d{0,5}\.\d{1,2})$|^\d{0,5}$/g.test(userid_length)){
         document.getElementById('pr_err').innerHTML = 'Only Numbers Accepted';
         userid_name.focus();
     document.getElementById('pr_err').style.color = "#FF0000";
