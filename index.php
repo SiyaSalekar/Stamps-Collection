@@ -43,7 +43,6 @@ $statement3->closeCursor();
 include('includes/header.php');
 ?>
 
-
 <body>
 
 
@@ -86,19 +85,26 @@ include('includes/header.php');
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
+                        <i class="fas fa-justify"></i>
                     </button>
-
+                    <div>
+                    <form class="example" action="action_page.php">
+  <input type="text" placeholder="Search Stamp" name="search">
+  <button class = "btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+</form>
+                    </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                               <span><i class="fas fa-plus"></i></span>
                             </li>
                             <li class="nav-item active">
-                                <a href="add_record_form.php"> Add Record</a>
+                            <a href="add_record_form.php"> 
+                            <span class="glyphicon glyphicon-plus"></span> 
+                            </a>
+                           
                             </li>
                         </ul>
                     </div>
@@ -106,21 +112,28 @@ include('includes/header.php');
             </nav>
 
             <h2><?php echo $category_name; ?></h2>
-                    
+
 <?php foreach ($records as $record) : ?>
-<img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" />
-<?php echo $record['name']; ?>
-<?php echo $record['price']; ?>
-<?php echo $record['year']; ?>
-<?php echo $record['country']; ?>
-<?php echo $record['size']; ?>
+<div class="card">
+<img class="card-img w-50" src="image_uploads/<?php echo $record['image']; ?>"/>
+<div class="card-body">
+<p class="card-text h4">
+<?php echo $record['name']; ?><br>
+<span class="glyphicon glyphicon-euro"></span><?php echo $record['price']; ?><br>
+<?php echo $record['year']; ?><br>
+<?php echo $record['country']; ?><br>
+<?php echo $record['size']; ?>mm
+</p>
+<hr>
 <form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
 value="<?php echo $record['recordID']; ?>">
 <input type="hidden" name="category_id"
 value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Delete">
+<button type="submit" class="btn btn-light">
+<span class="glyphicon glyphicon-trash"></span>
+</button>
 </form>
 <form action="edit_record_form.php" method="post"
 id="delete_record_form">
@@ -128,15 +141,16 @@ id="delete_record_form">
 value="<?php echo $record['recordID']; ?>">
 <input type="hidden" name="category_id"
 value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Edit">
+<button type="submit" class="btn btn-light">
+<span class="glyphicon glyphicon-pencil"></span>
+</button>
 </form>
-<div class="line"></div>
+</div>
+</div>
 <?php endforeach; ?>
 
-        </div>
-    </div>
-
-
+</div>
+</div>
 
       <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
