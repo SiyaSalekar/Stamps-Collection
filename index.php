@@ -115,10 +115,11 @@ include('includes/header.php');
 
 <?php foreach ($records as $record) : ?>
 <div class="card">
-<img class="card-img w-50" src="image_uploads/<?php echo $record['image']; ?>"/>
+<div class="img-div"><img class="card-img" src="image_uploads/<?php echo $record['image']; ?>"/>
+</div>
 <div class="card-body">
-<p class="card-text h4">
-<?php echo $record['name']; ?><br>
+<p class="card-text h3">
+<?php echo $record['name']; ?><br><br>
 <span class="glyphicon glyphicon-euro"></span><?php echo $record['price']; ?><br>
 <?php echo $record['year']; ?><br>
 <?php echo $record['country']; ?><br>

@@ -22,6 +22,28 @@ p {
     flex-direction: row;
     padding: 50px;
     margin-bottom: 20px;
+   
+}
+.card-img{
+    width: 230px;
+    height: 230px;
+    
+}
+
+.img-div{
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 40px;
+}
+
+.card-body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .card-text{
+        margin-top: 0px;
+        
+    }
 }
 
 a,
@@ -175,3 +197,5 @@ a.article:hover {
         display: none;
     }
 }
+
+/*sidebar end*/

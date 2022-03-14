@@ -29,7 +29,7 @@ include('includes/header.php');
                    value="<?php echo $records['recordID']; ?>">
              <br>
             <label>Category ID:</label>
-            <input id="category_id" type="category_id" name="category_id" onBlur="categoryid_validation();" required 
+            <input id="category_id" type="category_id" name="category_id" onBlur="validate();" required 
                    value="<?php echo $records['categoryID']; ?>">
                    <div id="uid_err"></div>
             <br>
@@ -41,7 +41,7 @@ include('includes/header.php');
 
             <label>Price:</label>
             <input id="price" type="input" name="price" required 
-            onBlur="price_validation();" value="<?php echo $records['price']; ?>">
+            onBlur="validate();" value="<?php echo $records['price']; ?>">
             <div id="pr_err"></div>
             <br>
 
@@ -50,22 +50,22 @@ include('includes/header.php');
             <br> 
             
             <label>Year:</label>
-            <input id="year" type="input" name="year" onBlur="year_validation();" placeholder = "YYYY"
+            <input id="year" type="input" name="year" onBlur="validate();" placeholder = "YYYY"
                    value="<?php echo $records['year']; ?>">
                    <div id="yr_err"></div>
             <br>
 
             <label>Country:</label><br>
             <select name="country" id="country">
-            <option value="$records['country']" selected><?php echo $records['country']; ?></option>
+            <option value="<?php echo $records['country']; ?>" selected><?php echo $records['country']; ?></option>
             <?php foreach ($country_list as $country) : ?>
-       <option value="<?php echo $country; ?>"><?php echo $country; ?></option>
+       <option value="<?php echo $country;?>"><?php echo $country;?></option>
        <?php endforeach; ?>
        </select>
        <br>
        
             <label>Size:</label>
-            <input id="size" type="input" onBlur="size_validation();" name="size" placeholder = "00 x 00"
+            <input id="size" type="input" onBlur="validate();" name="size" placeholder = "00 x 00"
                    value="<?php echo $records['size']; ?>">
                    <div id="sr_err"></div>
             <br>
@@ -73,9 +73,8 @@ include('includes/header.php');
             <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
             <?php } ?>
-            
             <label>&nbsp;</label>
-            <input type="submit" value="Save Changes">
+            <button type="submit" name="btn-submit" id="btn-submit" disabled="disabled">Submit</button>
             <br>
         </form>
         <p><a href="index.php">View Homepage</a></p>
