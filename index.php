@@ -37,6 +37,8 @@ $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
 $records = $statement3->fetchAll();
 $statement3->closeCursor();
+
+
 ?>
 
 <?php
@@ -91,11 +93,12 @@ include('includes/header.php');
                         <i class="fas fa-justify"></i>
                     </button>
                     <div>
-                    <form class="example" action="action_page.php">
-  <input type="text" placeholder="Search Stamp" name="search">
-  <button class = "btn btn-light" type="submit"><i class="fas fa-search"></i></button>
-</form>
-                    </div>
+
+                    <form class="example" method="GET">
+		<input type="text" placeholder="Search Stamp" name=<?php $query?>/>
+		<button class = "btn btn-light" type="submit" value="Search"><i class="fas fa-search"></i></button>
+	</form>
+             </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">

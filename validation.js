@@ -29,7 +29,13 @@ function price_validation(){
     var userid_value = document.getElementById("price").value;
     var userid_length = userid_value;
 
-    if(userid_length<0 || userid_length>1000)
+    if(userid_length===""){
+        document.getElementById('pr_err').innerHTML = 'cannot be empty';
+        userid_name.focus();
+    document.getElementById('pr_err').style.color = "#FF0000";
+        return false;
+    }
+    else if(userid_length<0 || userid_length>1000)
     {
     document.getElementById('pr_err').innerHTML = 'Enter Price [0-1000]';
     userid_name.focus();
@@ -42,6 +48,7 @@ function price_validation(){
     document.getElementById('pr_err').style.color = "#FF0000";
     return false;
     }
+    
     else
     {
     document.getElementById('pr_err').innerHTML = 'Price OK';
