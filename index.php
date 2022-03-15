@@ -97,6 +97,7 @@ include('includes/header.php');
                     <form action="search.php" method="post">
 Search <input type="text" name="search"><br>
 </form>
+
              </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
@@ -125,7 +126,7 @@ Search <input type="text" name="search"><br>
 <span class="glyphicon glyphicon-euro"></span><?php echo $record['price']; ?><br>
 <?php echo $record['year']; ?><br>
 <?php echo $record['country']; ?><br>
-<?php echo $record['size']; ?>mm
+<?php echo $record['size']; ?>cm
 </p>
 <hr>
 <form action="delete_record.php" method="post"
