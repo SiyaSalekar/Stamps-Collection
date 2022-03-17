@@ -6,3 +6,5 @@ A starter project for DkIT students on the Server-Side module.
 * Move the PHP files in to your htdocs folder so Apache can process the PHP code
 * Configure the database.php file to connect to your SQL database
 
+
+![alt text](image_uploads/log.png "Logo Title Text 1")
