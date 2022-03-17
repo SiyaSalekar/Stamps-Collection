@@ -1,6 +1,6 @@
 # Stamp It
 ![alt text](image_uploads/log.png "Logo")
-Browse through a Fascinating Stamps Collection.
+### Browse through a Fascinating Stamps Collection.
 ### Instructions
 * Create a MySQL database called php-crud in PHP MyAdmin
 * Run the code in the sql-db.txt file in PHP MyAdmin
