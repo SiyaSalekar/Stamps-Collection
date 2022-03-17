@@ -35,7 +35,6 @@ p {
 .img-div {
   width: 250px;
   height: 250px;
-  border: 1px solid black;
   padding: 10px;
   margin-right: 40px;
 }
@@ -338,12 +337,12 @@ a:focus {
   padding: 7px;
   background-color: #F3E9DD;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .btbtn:hover {
   background-color: #F7E2E2;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .subm {

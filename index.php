@@ -119,7 +119,8 @@ include('includes/header.php');
 
 <?php foreach ($records as $record) : ?>
 <div class="card">
-<div class="img-div"><img class="card-img" src="image_uploads/<?php echo $record['image']; ?>"/>
+<div class="img-div">
+    <img class="card-img" src="image_uploads/<?php echo $record['image']; ?>"/>
 </div>
 <div class="card-body">
 <p class="card-text h3">
