@@ -3,7 +3,7 @@
 header{
     margin: 0;
     border-bottom: 2px solid black;
-    font-family: $font-stack;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     h1 {
         margin: 0;
@@ -11,4 +11,35 @@ header{
         color: $header-color;
         }
 
+}
+.logos{
+  width: 43px;
+  height: 45px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+.form-vertical{
+    background-color: rgb(242, 245, 222);
+    padding: 20px;
+    border-radius: 20px;
+}
+.control-label{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+   
+}
+.form-control{
+    height: 30px;
+    border-radius: 10px;
+}
+
+.search{
+    background-color: white;
+    border-radius: 20px;
+    width: 200px;
+    padding: 8px;
+    height: 27px;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: medium;
 }

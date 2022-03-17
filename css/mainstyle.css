@@ -202,7 +202,7 @@ a.article:hover {
 header {
   margin: 0;
   border-bottom: 2px solid black;
-  font-family: "Shizuru", cursive;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 header h1 {
   margin: 0;
@@ -210,10 +210,169 @@ header h1 {
   color: #32f7;
 }
 
+.logos {
+  width: 43px;
+  height: 45px;
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
+.form-vertical {
+  background-color: #f2f5de;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.control-label {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: medium;
+}
+
+.form-control {
+  height: 30px;
+  border-radius: 10px;
+}
+
+.search {
+  background-color: white;
+  border-radius: 20px;
+  width: 200px;
+  padding: 8px;
+  height: 27px;
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: medium;
+}
+
 /*body style*/
 body {
   font-family: "Poppins", sans-serif;
   background: #fafafa;
+}
+
+.btn {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+
+.card-img {
+  width: 230px;
+  height: 230px;
+}
+
+.img-div {
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  margin-right: 40px;
+}
+
+.card-body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-body .card-text {
+  margin-top: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+.active {
+  font-size: 13px;
+}
+
+.list-unstyled {
+  font-size: 13px;
+}
+
+.btbtn {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 130px;
+  text-align: center;
+  padding: 7px;
+  background-color: #F3E9DD;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.btbtn:hover {
+  background-color: #F7E2E2;
+  font-size: 15px;
+}
+
+.subm {
+  margin-bottom: 20px;
+  margin-left: 5px;
+  float: left;
+}
+
+.add-title {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.home-btn {
+  margin-top: 30px;
+  background-color: #ebf0f1;
+  border: 1px solid black;
+  width: 100px;
+  text-align: center;
+  border-radius: 14px;
+  color: black;
+  height: 20px;
+}
+
+.home-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: gray;
 }
 
 footer {

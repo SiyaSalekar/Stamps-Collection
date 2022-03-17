@@ -9,6 +9,7 @@ $year = filter_input(INPUT_POST, 'year');
 $country = filter_input(INPUT_POST, 'country');
 $size = filter_input(INPUT_POST, 'size');
 
+
 // Validate inputs
 if ($category_id == NULL ||
 $category_id == FALSE || empty($name) ||
@@ -20,7 +21,7 @@ $price == NULL || $price == FALSE ) {
 
     /**************************** Image upload ****************************/
 
-    error_reporting(~E_NOTICE); 
+
 
 // avoid notice
 
@@ -44,7 +45,7 @@ $price == NULL || $price == FALSE ) {
         // Check file size '5MB'
             if ($imgSize < 5000000) {
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $upload_dir . $image)) {
-                    echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+                 
                 } else {
                     $error =  "Sorry, there was an error uploading your file.";
                     include('error.php');
@@ -85,3 +86,4 @@ $price == NULL || $price == FALSE ) {
     // Display the Product List page
     include('index.php');
 }
+

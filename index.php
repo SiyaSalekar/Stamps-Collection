@@ -52,11 +52,11 @@ include('includes/header.php');
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Stamp It</h3>
+                <h3>Stamp It <img class="logos" src="image_uploads/log.png"></h3>
             </div>
-
+ 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
+               
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categories</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -74,12 +74,13 @@ include('includes/header.php');
                 <a href="category_list.php">Manage Categories</a>
                 </li>
                 <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to Homepage</a>
+                    <a href="index.php" class="article">Homepage</a>
                 </li>
             </ul>
         </nav>
 
         <!-- Page Content  -->
+    
         <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -90,13 +91,14 @@ include('includes/header.php');
                         
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-justify"></i>
+                    <i class="icon-align-justify"></i>
                     </button>
                     <div>
 
                     <form action="search.php" method="post">
-Search <input type="text" name="search"><br>
+<input class="search" type="text" name="search" placeholder="Search Stamps"><br>
 </form>
+
              </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
@@ -113,7 +115,7 @@ Search <input type="text" name="search"><br>
                 </div>
             </nav>
 
-            <h2><?php echo $category_name; ?></h2>
+        <h2 class="btbtn"><?php echo $category_name; ?></h2>
 
 <?php foreach ($records as $record) : ?>
 <div class="card">
@@ -122,10 +124,11 @@ Search <input type="text" name="search"><br>
 <div class="card-body">
 <p class="card-text h3">
 <?php echo $record['name']; ?><br><br>
+
+Since <?php echo $record['year']; ?><br>
+<?php echo $record['country']; ?><br><br>
+<?php echo $record['size']; ?>cm<br><br>
 <span class="glyphicon glyphicon-euro"></span><?php echo $record['price']; ?><br>
-<?php echo $record['year']; ?><br>
-<?php echo $record['country']; ?><br>
-<?php echo $record['size']; ?>mm
 </p>
 <hr>
 <form action="delete_record.php" method="post"
